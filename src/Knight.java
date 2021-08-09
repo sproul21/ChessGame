@@ -12,4 +12,8 @@ public class Knight extends Piece
         else
             image = new ImageIcon("wknight.gif");
     }
+    public boolean canMove(int startx, int starty, int endx, int endy)
+    {
+        return(true);
+    }
 }

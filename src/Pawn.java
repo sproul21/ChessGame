@@ -12,4 +12,8 @@ public class Pawn extends Piece
         else
             image = new ImageIcon("wpawn.gif");
     }
+    public boolean canMove(int startx, int starty, int endx, int endy)
+    {
+        return(true);
+    }
 }

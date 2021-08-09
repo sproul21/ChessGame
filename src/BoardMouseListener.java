@@ -44,10 +44,35 @@ public class BoardMouseListener implements MouseListener
             return;
         if(Chess.position[startx][starty]!=null && Chess.position[endx][endy]!=null && Chess.position[endx][endy].isBlackplayer==Chess.position[startx][starty].isBlackplayer)
             return;
+        if(Chess.position[startx][starty].canMove(startx,starty,endx,endy) == false)
+            return;
 
         Chess.position[endx][endy] = Chess.position[startx][starty];
         Chess.position[startx][starty]= null;
         Chess.Board.repaint();
+
+        while(true)
+        {
+            startx=(int)(Math.random()*8);
+            starty=(int)(Math.random()*8);
+            endx=(int)(Math.random()*8);
+            endy=(int)(Math.random()*8);
+            if(Chess.position[startx][starty]== null)
+                continue;
+            if(startx == endx && starty == endy)
+                continue;
+            if(Chess.position[startx][starty].isBlackplayer == false)
+                continue;
+            if(Chess.position[startx][starty]!=null && Chess.position[endx][endy]!=null && Chess.position[endx][endy].isBlackplayer==Chess.position[startx][starty].isBlackplayer)
+                continue;
+            if(Chess.position[startx][starty].canMove(startx,starty,endx,endy) == false)
+                continue;
+
+            Chess.position[endx][endy] = Chess.position[startx][starty];
+            Chess.position[startx][starty]= null;
+            Chess.Board.repaint();
+            break;
+        }
 
 
 

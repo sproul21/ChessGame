@@ -12,4 +12,8 @@ public class Bishop extends Piece
         else
             image = new ImageIcon("wbishop.gif");
     }
+    public boolean canMove(int startx, int starty, int endx, int endy)
+    {
+        return(true);
+    }
 }

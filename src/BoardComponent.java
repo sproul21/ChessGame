@@ -37,16 +37,7 @@ public class BoardComponent extends JComponent {
         }
     }
 
-/*
-        Color lightBrown;
-        lightBrown= new Color(233,174,95);
-        Color darkBrown;
-        darkBrown= new Color(177,113,24);
-        g.setColor(lightBrown);
-        g.fillRect(0*Chess.piecesize,0*Chess.piecesize,Chess.piecesize,Chess.piecesize);
-        g.setColor(darkBrown);
-        g.fillRect(1*Chess.piecesize,0*Chess.piecesize,Chess.piecesize,Chess.piecesize);
-*/
+
 
 
 

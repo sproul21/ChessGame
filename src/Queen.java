@@ -12,4 +12,8 @@ public class Queen extends Piece
         else
             image = new ImageIcon("wqueen.gif");
     }
+    public boolean canMove(int startx, int starty, int endx, int endy)
+    {
+        return(true);
+    }
 }
